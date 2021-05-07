@@ -225,6 +225,51 @@ header .link, .logo-list {
     color: var(--focus-color-text);
 }
 
+.input-footer-form {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background: transparent;
+    margin-right: 12px;
+}
+
+.footer-form {
+    margin-top: 20px;
+}
+
+.btn-footer-form:after {
+    content: "";
+    background-image: url(../images/icons/icon-send.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.btn-footer-form {
+    justify-content: center;
+    display: inline-flex;
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: var(--accent-color-accent);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.87;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--focus-color-text);
+}
+
 .footer-txt {
     font-style: normal;
     font-weight: bold;
@@ -298,7 +343,7 @@ header .link, .logo-list {
 }
 
 .caption-our-team-list-item-tittle {
-    text-transform:uppercase;
+    text-transform: uppercase;
     position: absolute;
     font-weight: bold;
     font-size: 14px;
@@ -706,4 +751,103 @@ header .link, .logo-list {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+
+.form {
+    position: relative;
+    margin: 40px;
+}
+
+.modal-tittle {
+    margin-bottom: 12px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+}
+
+.form-item {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.checkbox-label::before {
+    display: inline-block;
+    content: "";
+    background-image: url(../images/icons/Vector-border.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    height: 15px;
+    cursor: pointer;
+    margin-right: 7px;
+}
+
+.checkbox-input:checked+.checkbox-label::before {
+    display: inline-block;
+    content: "";
+    background-image: url(../images/icons/choise.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--accent-color-accent);
+    border-radius: 2px;
+    width: 16px;
+    height: 15px;
+    cursor: pointer;
+    margin-right: 7px;
+}
+
+.form-input {
+    display: block;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.icon-form-send {
+    position: absolute;
+    transform: translateY(-100%);
+}
+
+.form-label {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #757575;
+}
+
+.form-label :placeholder-shown {
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.form-item a {
+    text-decoration: underline;
+    color: var(--accent-color-accent);
+}
+
+.modal-btn {
+    position: absolute;
+    transform: translateX(50%);
+    margin-top: 30px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    color: var(--focus-color-text);
+    background-color: var(--accent-color-accent);
+    border-radius: 4px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn:hover, .modal-btn:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.icon-form-send {
+    position: absolute;
+    transform: translateY(50%);
 }
