@@ -226,6 +226,9 @@ header .link, .logo-list {
 }
 
 .input-footer-form {
+    outline: none;
+    color: var(--focus-color-text);
+    padding: 15px;
     width: 358px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -694,7 +697,8 @@ header .link, .logo-list {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn:hover, .btn:focus {
+.btn:hover,
+ .btn:focus {
     background-color: var(--accent-color-accent);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
@@ -720,7 +724,6 @@ header .link, .logo-list {
     transform: translate(-50%, -50%);
     background: var(--focus-color-text);
     width: 528px;
-    height: 581px;
     max-height: 100vh;
     overflow: auto;
     transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -733,7 +736,6 @@ header .link, .logo-list {
 
 .modal-icon-button {
     display: flex;
-    ;
     position: absolute;
     top: 8px;
     right: 8px;
@@ -747,6 +749,10 @@ header .link, .logo-list {
     box-sizing: border-box;
 }
 
+.modal-icon-button:hover .modal-icon, .modal-icon-button:focus .modal-icon {
+    fill: var(--accent-color-accent);
+}
+
 .is-hidden {
     opacity: 0;
     visibility: hidden;
@@ -755,7 +761,7 @@ header .link, .logo-list {
 
 .form {
     position: relative;
-    margin: 40px 40px 120px 40px;
+    padding: 40px;
 }
 
 .modal-tittle {
@@ -784,6 +790,8 @@ header .link, .logo-list {
     height: 15px;
     cursor: pointer;
     margin-right: 7px;
+    position: relative;
+    top: 2px;
 }
 
 .checkbox-input:checked+.checkbox-label::before {
@@ -810,12 +818,15 @@ header .link, .logo-list {
     padding-left: 42px;
 }
 
-.form-input:focus, .form-input:hover+.icon-form-send {
+.form-input:focus+.icon-form-send,
+.form-input:hover+.icon-form-send {
     fill: var(--accent-color-accent);
 }
 
-.form-input:focus, .form-input:hover, .form-textarea:hover, .form-textarea:focus {
+.form-input:focus, .form-input:hover, 
+.form-textarea:hover, .form-textarea:focus {
     border: 1px solid var(--accent-color-accent);
+    outline: none;
 }
 
 .icon-form-send {
@@ -840,7 +851,6 @@ header .link, .logo-list {
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
 }
 
 .form-textarea::placeholder {
@@ -855,9 +865,6 @@ header .link, .logo-list {
     color: #757575;
 }
 
-.form-label :placeholder-shown {
-    color: rgba(117, 117, 117, 0.5);
-}
 
 .form-item a {
     text-decoration: underline;
@@ -865,8 +872,6 @@ header .link, .logo-list {
 }
 
 .modal-btn {
-    position: absolute;
-    transform: translateX(50%);
     margin-top: 30px;
     border: none;
     width: 200px;
@@ -879,4 +884,8 @@ header .link, .logo-list {
 
 .modal-btn:hover, .modal-btn:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.form-submit {
+    text-align: center;
 }
